@@ -1,0 +1,6 @@
+archive.tar
+hostname.sh
+ls_output.txt
+ls_to_file.sh
+printf_pwd.sh
+testShell00
