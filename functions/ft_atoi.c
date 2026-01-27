@@ -1,21 +1,25 @@
-
-#include <stdio.h>
+#include "utile.h"
 
 int     ft_atoi(char *str)
 {
     int i = 0;
     int res = 0;
+	int sign = 1;
 
-    while (str[i])
+	while (str[i])
     {
+		if (str[i] == ' ')
+			i++;
+		if (str[i] == '-')
+		{
+			sign = -1;
+			i++;
+			printf("%d\n", sign);
+		}
+		if (str[i] < '0' || str[i] > '9')
+			i++;
         res = (res * 10) + (str[i] - '0');
 		i++;
-        printf("%d\n", res);
     }
-    return (res);
-}
-
-int main()
-{
-    printf("%d\n", (ft_atoi("56789")));
+    return (res * sign);
 }

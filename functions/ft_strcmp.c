@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "utile.h"
+
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -12,7 +13,3 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-int main(int argc, char **argv)
-{
-	printf("%d", ft_strcmp(argv[1], argv[2]));
-} 

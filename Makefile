@@ -1,9 +1,9 @@
-NAME = a.out
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -I.
 
-SRC = ft_strlen.c
+SRC = main.c functions/ft_putstr.c functions/ft_strlen.c functions/ft_putchar.c functions/ft_swap.c functions/ft_strcmp.c functions/ft_strcpy.c functions/ft_atoi.c
 OBJ = $(SRC:.c=.o)
+NAME = prog
 
 all: $(NAME)
 
@@ -20,7 +20,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-
-
-

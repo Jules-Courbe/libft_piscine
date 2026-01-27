@@ -1,4 +1,5 @@
-#include <stdio.h> 
+#include "utile.h"
+
 int	ft_strncmp(char *s1, char *s2, int n)
 {
 	int i;
@@ -13,8 +14,4 @@ int	ft_strncmp(char *s1, char *s2, int n)
 	if (i == n)
 		i--;
 		return (s1[i] - s2[i]);	
-}
-int main(int argc, char **argv)
-{	
-	printf("%d", ft_strncmp(argv[1], argv[2], 5));
 }

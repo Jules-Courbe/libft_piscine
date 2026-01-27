@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "prototypes.h"
+#include "utile.h"
 
 char    *ft_strcpy(char *dest, char *src)
 {

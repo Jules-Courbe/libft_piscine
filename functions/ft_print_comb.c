@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "utile.h"
 
 void	ft_print_comb(void)
 {
@@ -32,9 +31,4 @@ void	ft_print_comb(void)
 		a++;
 	}
 
-}
-
-int main(void)
-{
-	ft_print_comb();
 }

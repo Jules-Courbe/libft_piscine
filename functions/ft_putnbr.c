@@ -1,14 +1,14 @@
-#include <unistd.h>
+#include "utile.h"
 
-void	ft_print_units(int n)
+void	ft_putnbr(int n)
 {
-	char	a;
+	int i;
 
-	a = (n % 10) + '0';
-	write(1, &a, 1);
-}
+	i = 0;
 
-int main()
-{
-	ft_print_units(5);
+	while (i < ft_strlen(n))
+	{
+		printf("%d", i);
+		i++;
+	}
 }

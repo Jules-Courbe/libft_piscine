@@ -1,10 +1,6 @@
-#include <unistd.h>
+#include "utile.h"
 
-char	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-char	ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	int i = 0;
 
@@ -14,3 +10,4 @@ char	ft_putstr(char *str)
 		i++;
 	}
 }
+
