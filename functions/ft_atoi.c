@@ -14,7 +14,6 @@ int     ft_atoi(char *str)
 		{
 			sign = -1;
 			i++;
-			printf("%d\n", sign);
 		}
 		if (str[i] < '0' || str[i] > '9')
 			i++;

@@ -7,7 +7,7 @@
 
 int ft_atoi(char *str);
 int ft_strcmp(char *s1, char *s2);
-int ft_strncmp(char *s1, char *s2, int n);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 void ft_putchar(char c);
 char *ft_strcpy(char *dest, char *src);
 int ft_swap(int a, int b);

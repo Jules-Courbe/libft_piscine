@@ -2,7 +2,5 @@
 
 int main(void)
 {
-
-	
-	printf("%d\n", ft_atoi("-7544527"));
+	printf("%d\n", ft_strncmp("hallo", "hzllo", 4));
 }
