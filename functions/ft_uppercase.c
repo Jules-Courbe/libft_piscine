@@ -1,12 +1,5 @@
-/*********************************************/
-/*   ft_uppercase.c*/
-/*                                           */
-/*   By: mr-burns*/
-/*   Created: 2025/09/10 10:17:58*/
-/*   Updated: 2025/09/10 10:17:58*/
-/*                                           */
-/*********************************************/
-#include <stdio.h> 
+#include "utile.h"
+
 void	ft_uppercase(char *str)
 {
 	int i = 0;
@@ -20,9 +13,4 @@ void	ft_uppercase(char *str)
 	printf("%c", str[i]);
 	i++;
   }
-}
-int main()
-{
-	char str[] = "Tableau";
-	ft_uppercase(str);
 }

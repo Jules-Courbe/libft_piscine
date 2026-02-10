@@ -2,5 +2,7 @@
 
 int main(void)
 {
-	printf("%d\n", ft_strncmp("hallo", "hzllo", 4));
+	int tab[] = {1, 2, 3, 4};
+
+	ft_foreach(tab, 4, ft_putnbr);
 }
