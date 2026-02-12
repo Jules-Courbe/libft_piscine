@@ -10,12 +10,15 @@ int ft_atoi(char *str);
 int ft_strcmp(char *s1, char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 void ft_putchar(char c);
-char *ft_strcpy(char *dest, char *src);
+char *ft_strcpy(char *dest, const char *src);
 void ft_swap(int a, int b);
 void ft_putstr(char *str);
-int ft_strlen(char *str);
+int ft_strlen(const char *str);
 void ft_uppercase(char *c);
 void ft_putnbr(int n);
-void ft_foreach(int *tab, int length, void (*f)(int));
+void ft_foreach(int *tab, int length, void (*f) (int), void (*f1) (int));
+void ft_print_digit(int n);
+int fibonacci(int index);
+char *ft_strdup(const char *str);
 
 #endif
