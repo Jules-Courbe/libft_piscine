@@ -4,7 +4,7 @@ char	*ft_strdup(const char *src)
 {
 	char *dest;
 
-	dest = malloc(sizeof(char) * ft_strlen(src) + '\0');
+	dest = malloc(sizeof(char) * ft_strlen(src) + 1);
 	if (dest == NULL)
 	{
 		return (NULL);
@@ -12,5 +12,4 @@ char	*ft_strdup(const char *src)
 	ft_strcpy(dest, src);
 
 	return (dest);
-
 }
