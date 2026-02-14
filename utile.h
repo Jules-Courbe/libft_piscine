@@ -13,6 +13,11 @@ typedef struct s_token
 	struct s_token *next;
 }	t_token;
 
+typedef struct s_node
+	{
+		char value;
+		struct s_node *next;
+	}	t_node;
 
 int ft_atoi(char *str);
 int ft_strcmp(char *s1, char *s2);
@@ -29,5 +34,7 @@ void ft_print_digit(int n);
 int fibonacci(int index);
 char *ft_strdup(const char *str);
 void free_list(t_token *head);
+void add_back(t_node **head, t_node *new_node);
+t_node *create_node(char value);
 
 #endif
