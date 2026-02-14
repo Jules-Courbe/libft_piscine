@@ -36,5 +36,6 @@ char *ft_strdup(const char *str);
 void free_list(t_token *head);
 void add_back(t_node **head, t_node *new_node);
 t_node *create_node(char value);
+int list_size(t_node *head);
 
 #endif

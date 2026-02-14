@@ -3,17 +3,16 @@
 void	add_back(t_node **head, t_node *new_node)
 {
 	t_node *tmp;
-	t_node *next;
 
 	if (new_node == NULL)
-		return (1);
+		return ;
 	if (*head == NULL)
 	{
-		head = new_node;
+		*head = new_node;
+		return ;
 	}
-	else 
-		while (tmp != NULL)
-		{
-			tmp = tmp->next;
-		}
+	tmp = *head;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = new_node;
 }
