@@ -1,5 +1,5 @@
 #ifndef UTILE_H
-# define UTILE_H
+#define UTILE_H
 
 #include <stdio.h>
 #include <unistd.h>
@@ -36,6 +36,8 @@ char *ft_strdup(const char *str);
 void free_list(t_token *head);
 void add_back(t_node **head, t_node *new_node);
 t_node *create_node(char value);
-int list_size(t_node *head);
+int	list_size(t_node *head);
+char *ft_strcapitalize(char *str);
+
 
 #endif
