@@ -2,10 +2,15 @@
 
 int main()
 {
-	int entier[] = {1, 2, 3, 4};
-	int i = 0;
-	
-		printf("%d\n", entier[1]);
+	int n = 5678;
+	int len = 0;
 
+
+	while (n != 0)
+    {
+        n = (n / 16);
+        len++;
+    }
+	printf("%d", len);
 
 }

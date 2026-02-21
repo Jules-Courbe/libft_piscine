@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
         str[0] = '0';
     }    
     
-    // Need modification to not have overflow but for now it's great
+    // Need modification to not have overflow but for now it's geate
     if (n == -2147483648)
         return ("-2147483648");
 
