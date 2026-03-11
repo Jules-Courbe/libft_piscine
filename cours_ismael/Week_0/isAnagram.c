@@ -1,8 +1,8 @@
+// Étant donné deux chaînes de caractères s et t, renvoyez true si t est un anagramme de s, et false autrement.
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 
 bool isAnagram(char* s, char* t) 
 {
@@ -31,43 +31,25 @@ bool isAnagram(char* s, char* t)
         i++;
         j++;
     }
+    // Remise a 0 des index
     i = 0;
     j = 0;
 
-    //remplire avec les vraies valeurs 
-    while (i <= 6)
+    // Main function / remplissage des occurences dans les tabs
+    while (i <= strlen(s))
     {
         tab_s[s[i] - 97] += 1;
         i++;
     }
-    while (j < 6)
+    while (j <= strlen(s))
     {
         tab_t[t[j] - 97] += 1;
         j++;
     }
     i = 0;
     j = 0;
-    while (i <= 25)
-    {
-        printf("%d", tab_s[i]);
-        i++;
-    }
-    printf("\n");
-    while (i <= 25)
-    {
-        printf("%d", tab_s[j]);
-        i++;
-    }
-    printf("\n");
-    while (j <= 25)
-    {
-        printf("%d", tab_t[j]);
-        j++;
-    }
-    // Remise a 0 des index
-    printf("\n");
-    i = 0;
-    j = 0;
+
+    // Condition d'arret if (tab_s == tab_t) return true else if false 
     while (index <= 25)
     {
         if (tab_s[i] != tab_t[j])
@@ -77,6 +59,7 @@ bool isAnagram(char* s, char* t)
         j++;
     }
     return (true);
+
 }
 
 // probleme des occurences de lettres 
@@ -85,7 +68,7 @@ bool isAnagram(char* s, char* t)
 
 int main ()
 {
-    char *s = "mmngra";
-    char *t = "ngmram";
+    char *s = "mngra";
+    char *t = "ngram";
     printf("%d\n",isAnagram(s, t));  
 }
