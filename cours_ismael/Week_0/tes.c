@@ -82,10 +82,20 @@ bool isAnagram(char* s, char* t)
 // probleme des occurences de lettres 
 // Creation de deux tableau d'entier representant l alphabet et incrementation des caracteres present 
 // Condition d'arret if (tab_s == tab_t) return true else if false 
+int *tab(void)
+{
+    int tab[2];
 
+    tab[0] = 1;
+    tab[1] = 2;
+
+    return (tab);
+}
 int main ()
 {
     char *s = "mmngra";
     char *t = "ngmram";
     printf("%d\n",isAnagram(s, t));  
+
+    printf("\n%ls", tab);
 }
