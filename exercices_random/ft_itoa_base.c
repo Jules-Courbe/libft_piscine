@@ -57,7 +57,7 @@ char	*ft_itoa_base(int n, int base)
 
 int main()
 {
-    int base = 36;
-    int n = 4095;
+    int base = 16;
+    int n = 2548;
     printf("%s", ft_itoa_base(n, base));
 }   

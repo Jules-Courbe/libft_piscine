@@ -32,7 +32,7 @@ int* sortArrayByParityII(int* nums, int numsSize, int* returnSize)
         i++;
     }
 
-    i = 0;
+    i = 0;-
     while (i < numsSize)
     {
         if (nums[i] % 2 == 0)

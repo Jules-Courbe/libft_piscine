@@ -6,13 +6,6 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-typedef struct s_token
-{
-	char *value;
-	int entier[3];
-	struct s_token *next;
-}	t_token;
-
 typedef struct s_node
 	{
 		char value;

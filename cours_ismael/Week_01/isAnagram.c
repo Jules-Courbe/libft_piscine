@@ -19,7 +19,6 @@ bool isAnagram(char* s, char* t)
     int i;
     int j;
     int index;
-    // connaissais pas cette forme pour declarer un tableau
     int tab_s[26] = {0};
     int tab_t[26] = {0};
 

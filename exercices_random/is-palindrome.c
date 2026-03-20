@@ -30,11 +30,8 @@ int is_palindrome(char *str)
 		{
 			return (2); 
 		}
-		if (str[i] == str[j])
-		{
-			i++;
-			j--;
-		}
+		i++;
+		j--;
 	}
 	return (0);
 }
