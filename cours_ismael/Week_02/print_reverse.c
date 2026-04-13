@@ -12,11 +12,14 @@ void print_reverse(const char *s)
 
     print_reverse(s + 1);
 
-    printf("1");
+    printf("%c", s[0]);
 }
-
+// abc 
+// bc
+// c
+// '\0'
 int main()
 {
-    const char *s = "Hello";
+    const char *s = "abc";
     print_reverse(s);
 }

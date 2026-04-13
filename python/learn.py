@@ -8,7 +8,6 @@ def supprimer():
     
 ecrire("rien de plus simple")
 ecrire("ligne numero deux")
-supprimer()
 
 with open("python.txt", "r") as f:
     lire = f.read()

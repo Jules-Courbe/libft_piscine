@@ -1,15 +1,23 @@
-import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib
-matplotlib.use("TkAgg")
+courses = ["pain", "lait", "oeufs", "pommes", "riz"]
 
-x = np.linspace(0, 3, 10) # 10 valeurs entre 0 et 3
-y = np.linspace(0, 2, 10)
+def all_in(liste):
+    for ingredient in liste:
+        print(ingredient)
+    print(liste[0])
+    print(liste[-1])
+    liste.append("bananes")
+    liste.remove(liste[1])
+    for ingredient in liste:
+        print(ingredient)
+    a = 0
+    for ingredient in liste:
+        a += 1
+    print(a)
+    for ingredient in liste:
+        print(f"{ingredient}\n")
+    for ingredient in liste:
+        if ingredient == "riz":
+            print(ingredient)
+        
 
-plt.figure(figsize=(12, 8))
-plt.plot(x, y)
-plt.title('Title')
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.legend('Legend')
-plt.show()
+all_in(courses)

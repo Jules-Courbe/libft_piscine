@@ -12,6 +12,11 @@ typedef struct s_node
 		struct s_node *next;
 	}	t_node;
 
+typedef struct s_token{
+	int value;
+	struct s_token *next;
+}	t_token;
+
 int ft_atoi(char *str);
 int ft_strcmp(char *s1, char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);

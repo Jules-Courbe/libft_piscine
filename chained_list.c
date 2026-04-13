@@ -1,5 +1,11 @@
 #include "utile.h"
 
+typedef struct s_node
+	{
+		char value;
+		struct s_node *next;
+	}	t_node;
+
 t_node *create_node(char value)
 {
 	t_node *new_node;

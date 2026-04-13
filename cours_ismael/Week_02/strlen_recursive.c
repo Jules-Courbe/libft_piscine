@@ -1,7 +1,6 @@
 // Longueur d’une string
 // Interdit d’utiliser strlen
 #include <stdio.h>
-// je peux mettre toute ma logique dans ma fonction 
 
 // commencer simple avec une function void qui print le result
 int strlen_recursive(const char *s)
