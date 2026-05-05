@@ -7,41 +7,6 @@ struct ListNode
     struct ListNode *next;
 };
 
-struct ListNode *create_node(int value)
-{
-    struct ListNode *new_node;
-
-    new_node = malloc(sizeof(struct ListNode));
-    if (!new_node)
-        return NULL;
-
-    new_node->val = value;
-    new_node->next = NULL;
-
-    return new_node;
-}
-
-void append_node(struct ListNode **head, int value)
-{
-    struct ListNode *new_node = create_node(value);
-    struct ListNode *tmp;
-
-    if (!new_node)
-        return;
-
-    if (*head == NULL)
-    {
-        *head = new_node;
-        return;
-    }
-
-    tmp = *head;
-    while (tmp->next != NULL)
-        tmp = tmp->next;
-
-    tmp->next = new_node;
-}
-
 void print_list(struct ListNode *head)
 {
     while (head != NULL)
@@ -91,12 +56,26 @@ int main()
 {
     struct ListNode *list = NULL;
 
-    append_node(&list, 1);
-    append_node(&list, 2);
-    append_node(&list, 3);
-    append_node(&list, 4);
+    struct ListNode *a;
+    struct ListNode *b;
+    struct ListNode *c;
+    struct ListNode *d;
 
-    list = reverseList(list);
+    a = malloc(sizeof(struct ListNode));
+    b = malloc(sizeof(struct ListNode));
+    c = malloc(sizeof(struct ListNode));
+    d = malloc(sizeof(struct ListNode));
+    
+    a->val = 1;
+    a->next = b;
+    b->val = 2;
+    b->next = c;
+    c->val = 1;
+    c->next = d;
+    d->val = 3;
+    d->next = NULL;
+
+    list = reverseList(a);
 
     print_list(list);
     free_list(list);

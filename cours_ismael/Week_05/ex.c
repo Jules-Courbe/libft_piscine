@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct noeud{
     int valeur;
@@ -73,6 +74,23 @@ struct noeud* reverseList(struct noeud* tete) {
     return (precedent);
 }
 
+bool hasCycle(struct noeud *head) {
+    struct noeud *slow;
+    struct noeud *fast;
+
+    slow = head;
+    fast = head;
+
+    while (slow != NULL)
+    {
+        fast = slow->next->next;
+        slow = fast->next;
+    
+        if (slow == fast)
+            return (true);
+    }
+    return (false);
+}
 int main()
 {
     struct noeud a;
@@ -90,6 +108,7 @@ int main()
     tete = ajouterDebut(tete, 0);
     ajouterFin(tete, 20);
     afficherListe(tete);
+    //printf("%d", hasCycle(tete));
     //printf("%d", tailleListe(tete));
     printf("\n");
     printf("\n");
