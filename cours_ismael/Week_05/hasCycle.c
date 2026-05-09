@@ -15,22 +15,18 @@ bool hasCycle(struct node *head) {
     slow = head;
     fast = head;
 
-    printf("slow : %d\n", slow->valeur);
-    printf("Fast : %d\n", fast->valeur);
+    if (!head)
+        return(false);
 
-    printf("slow : %d\n", slow->next->valeur);
-    printf("Fast : %d\n", fast->next->next->valeur);
-
-    // Comment eviter le core dumped. 
     while (fast->next != NULL && fast->next->next != NULL)
     {
         slow = slow->next;
         fast = fast->next->next;
 
         if (slow == fast)
-            return (false);
+            return (true);
     }
-    return (true);
+    return (false);
 }
 
 void free_list(struct node *head)
@@ -56,14 +52,12 @@ int main()
     b = malloc(sizeof(struct node));
     c = malloc(sizeof(struct node));
 
-    a->valeur = 1;
+    a->valeur = -1;
     a->next = b;
     b->valeur = 2;
     b->next = c;
     c->valeur = 3;
-    c->next = NULL;
+    c->next = b;
 
     printf("%d", hasCycle(a));
-
-    free_list(a);
 }

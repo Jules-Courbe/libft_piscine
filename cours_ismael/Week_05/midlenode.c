@@ -8,26 +8,40 @@ struct ListNode {
     struct ListNode* next;
 };
 
-struct ListNode* middleNode(struct ListNode* head) 
+void print_list(struct ListNode *head)
 {
-    struct ListNode *new = malloc(sizeof(struct ListNode) * 4);
-    struct ListNode *tmp = head;
-
     while (head != NULL)
     {
-        printf("hello");
-        if ((head->val % 2) == 0)
-        {
-            while (head != NULL)
-            {
-                new->val = head->val;
-                head =  head->next;
-                printf("%d", new->val);
-            }
-        }
+        printf("%d", head->val);
+        if (head->next)
+            printf(" -> ");
         head = head->next;
     }
-    return (new);
+    printf("\n");
+}
+
+struct ListNode* middleNode(struct ListNode* head) 
+{
+    struct ListNode *tmp = head;
+    int max = 0;
+    int count = 0;
+    while (head != NULL)
+    {
+        head = head->next;
+        count++;
+    }
+
+    max = count / 2;
+    count = 0;
+    head = tmp;
+
+    while (count <= max)
+    {
+        head = head->next;
+        count++;
+    }
+    
+    return (head);
 }
 
 int main()
@@ -39,20 +53,27 @@ int main()
     struct ListNode *b;
     struct ListNode *c;
     struct ListNode *d;
+    struct ListNode *e;
 
     a = malloc(sizeof(struct ListNode));
     b = malloc(sizeof(struct ListNode));
     c = malloc(sizeof(struct ListNode));
     d = malloc(sizeof(struct ListNode));
+    e = malloc(sizeof(struct ListNode));
+
     
     a->val = 1;
     a->next = b;
     b->val = 2;
     b->next = c;
-    c->val = 1;
+    c->val = 3;
     c->next = d;
-    d->val = 3;
-    d->next = NULL;
+    d->val = 4;
+    d->next = e;
+    e->val = 5;
+    e->next = NULL;
 
-    middleNode(a);
+    list = middleNode(a);
+
+    print_list(list);
 }

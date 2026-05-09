@@ -8,23 +8,29 @@ struct node{
     struct node *next;
 };
 
+// pour supprimer un node il faut le free
 struct node* removeElements(struct node* head, int val) 
 {
-    struct node *new;
-    new = malloc(sizeof(struct node) * val);
+    struct node faux;
+    faux.next = head;
+    struct node *curr = &faux;
 
-    while (head != NULL)
+    while (head != NULL && head->next != NULL)
     {
-        if (head->val == val)
-            {
-                head = head->next;
-            }
-        new->val = head->val;
-        printf("%d", new->val);
-        head = head->next; 
+        if (head->next->val == val)
+        {
+            // Le free libere la l'adresse memoire du node a suprimer
+            struct node *tmp = head->next;
+            head->next = head->next->next;
+            free(tmp);
+        }
+        else
+        {
+            head = head->next;
+        }
     }
-
-    return (new);
+    head = faux.next;
+    return head;
 }
 
 void afficherListe(struct node *head)
@@ -78,6 +84,9 @@ int main()
 
   afficherListe(a);
   printf("\n");
-  removeElements(a, 3);
+  list = removeElements(a, 3);
+  afficherListe(list);
+  free_list(list);
+  return 0;
 
 }
