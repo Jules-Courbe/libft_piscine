@@ -1,8 +1,29 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I.
+CFLAGS = -Wall -Wextra -Werror
 
-SRC = main.c functions/ft_putstr.c functions/ft_strlen.c functions/ft_putchar.c functions/ft_swap.c functions/ft_strcmp.c functions/ft_strcpy.c functions/ft_atoi.c functions/ft_strncmp.c functions/ft_uppercase.c functions/ft_foreach.c functions/ft_putnbr.c functions/ft_print_digit.c functions/fibonacci.c functions/ft_strdup.c functions/free_list.c functions/add_back.c functions/create_node.c functions/list_size.c functions/ft_strcapitalize.c
+SRC = main.c \
+	functions/ft_putstr.c \
+	functions/ft_strlen.c \
+	functions/ft_putchar.c \
+	functions/ft_swap.c \
+	functions/ft_strcmp.c \
+	functions/ft_strcpy.c \
+	functions/ft_atoi.c \
+	functions/ft_strncmp.c \
+	functions/ft_uppercase.c \
+	functions/ft_foreach.c \
+	functions/ft_putnbr.c \
+	functions/ft_print_digit.c \
+	functions/fibonacci.c \
+	functions/ft_strdup.c \
+	functions/ft_split.c \
+	functions/free_list.c \
+	functions/add_back.c \
+	functions/create_node.c \
+	functions/list_size.c \
+	functions/ft_strcapitalize.c \
 OBJ = $(SRC:.c=.o)
+INC = -I.
 NAME = prog
 
 all: $(NAME)
@@ -11,7 +32,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

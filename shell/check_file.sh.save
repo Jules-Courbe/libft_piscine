@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [-f ]
+then
+	echo "Le fichier existe"
+else 
+	echo "Le fichier n'existe pas"
+fi

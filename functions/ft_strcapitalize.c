@@ -4,9 +4,11 @@ char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
+	i = 0;
+
 	if (!str)
 		return (NULL);
-	i = 0;
+	
 	while (str[i])
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')

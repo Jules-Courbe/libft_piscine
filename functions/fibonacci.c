@@ -1,4 +1,4 @@
-#include "utile.h"
+#include "/home/mr-burns/Documents/libft_piscine/utile.h"
 
 int	fibonacci(int index)
 {
@@ -10,10 +10,12 @@ int	fibonacci(int index)
 	{
 		return (0);
 	}
+	
 	else if (index == 1)
 	{
 		return (1);
 	}
+		
 	else
 	{
 		printf("appel fibonacci(%d)\n", index);

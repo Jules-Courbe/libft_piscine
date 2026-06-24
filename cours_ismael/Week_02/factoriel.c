@@ -17,5 +17,5 @@ int factorial(int n)
 
 int main()
 {
-    printf("%d", factorial(2));
+    printf("%d", factorial(8));
 }

@@ -1,10 +1,6 @@
 #include "utile.h"
 
-int	main(void)
+int main()
 {
-	char str[] = "sALUT, comMent tu vas ?";
-
-
-	printf("%s", ft_strcapitalize(str));
-	return (0);
+    printf("%d", factoriel(5));
 }

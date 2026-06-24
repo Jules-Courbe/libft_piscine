@@ -1,4 +1,5 @@
 #include "utile.h"
+#include <stdio.h>
 
 int     ft_atoi(char *str)
 {
@@ -8,16 +9,18 @@ int     ft_atoi(char *str)
 
 	while (str[i])
     {
-		if (str[i] == ' ')
+		while (str[i] == ' ')
 			i++;
 		if (str[i] == '-')
 		{
 			sign = -1;
 			i++;
 		}
-		if (str[i] < '0' || str[i] > '9')
+		while (str[i] >= '0' && str[i] <= '9')
+        {
+			res = (res * 10) + (str[i] - '0');
 			i++;
-        res = (res * 10) + (str[i] - '0');
+		}
 		i++;
     }
     return (res * sign);

@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 typedef struct s_node
 	{
@@ -22,7 +23,7 @@ int ft_strcmp(char *s1, char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 void ft_putchar(char c);
 char *ft_strcpy(char *dest, const char *src);
-void ft_swap(int a, int b);
+void ft_swap(int *a, int *b);
 void ft_putstr(char *str);
 int ft_strlen(const char *str);
 void ft_uppercase(char *c);
@@ -31,6 +32,7 @@ void ft_foreach(int *tab, int length, void (*f) (int), void (*f1) (int));
 void ft_print_digit(int n);
 int fibonacci(int index);
 char *ft_strdup(const char *str);
+char **ft_split(char const *s, char c);
 void free_list(t_token *head);
 void add_back(t_node **head, t_node *new_node);
 t_node *create_node(char value);
